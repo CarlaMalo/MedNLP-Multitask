@@ -80,7 +80,7 @@ def plot_crosstab(df):
     table = table[table.sum().sort_values(ascending=False).index]
 
     plt.figure(figsize=(18, 10))
-    sns.heatmap(table.T, cmap="Blues", cbar_kws=dict(shrink=0.6))
+    sns.heatmap(table.T, cmap="Blues", cbar_kws=dict(shrink=0.6), linewidths=0.5, linecolor ='#EEEEEE' )
 
     plt.title("Cluster vs Label Heatmap", fontsize=14)
     plt.xticks(rotation=90, fontsize=6)

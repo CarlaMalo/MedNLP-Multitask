@@ -2,12 +2,13 @@
 import spacy
 import re
 
+# Load spaCy model once for efficiency (disable NER/parser to save time)
 nlp = spacy.load("en_core_web_sm", disable=["ner", "parser"])
 
 # Template boilerplate common across specialties
 
 
-# Clinically meaningful abbreviations
+# # Clinically meaningful abbreviations that are short but semantically rich
 CLINICAL_ABBREV = {"bp","hr","ct","mri","dm","mi","copd","htn","hx","dx","sx"}
 
 # # Negation terms important to semantics
@@ -16,15 +17,20 @@ CLINICAL_ABBREV = {"bp","hr","ct","mri","dm","mi","copd","htn","hx","dx","sx"}
 
 def preprocess_text(
     text: str,
-    enable: bool = True,
-    lowercase: bool = True,
-    lemmatize: bool = True,
-    remove_stopwords: bool = True,
-    remove_numbers: bool = True,
-    keep_short_tokens: bool = True,
-    remove_medical_boilerplate: bool = True,
+    enable: bool = True,                         # allow easy toggle to skip preprocessing
+    lowercase: bool = True,                         # normalize case for TF-IDF consistency
+    lemmatize: bool = True,                     # reduce inflected forms to base lemmas
+    remove_stopwords: bool = True,              # remove common English filler words
+    remove_numbers: bool = True,                # control whether numeric tokens are dropped
+    keep_short_tokens: bool = True,             # allow short clinical abbreviations to be preserved
+    remove_medical_boilerplate: bool = True,    # remove repetitive template phrases
     **kwargs
 ):
+    # ------------------------------------------
+    # Extended stopword list for medical boilerplate
+    # These are repetitive template terms, workflow words, or anatomical directionals
+    # that don’t help separate clinical subdomains.
+    # ------------------------------------------
     MEDICAL_STOPWORDS = {
         "history", "present", "illness", "hpi", "subjective", "objective",
         "assessment", "procedure", "consult", "chief", "complaint",
@@ -153,19 +159,24 @@ def preprocess_text(
         "image", "window", "slice", "series",
         "sequence", "contrast", "artifact",
     }
+    
+    # skip non-text input (e.g., NaN rows)
     if not isinstance(text, str):
         return ""
     
+    # allow turning off preprocessing for comparison
     if not enable:
         return text
-
+    
+    # lowercasing improves token consistency in TF-IDF
     if lowercase:
         text = text.lower()
 
-    # Remove symbols but keep whitespace
+    # Remove punctuation/symbols but keep spaces and digits (digits handled later)
     text = re.sub(r"[^a-z0-9\s]", " ", text)
 
-    # Remove stand-alone numbers
+    # Remove standalone numeric tokens (e.g., "123", "50")
+    # Keeping numbers can preserve dosage or anatomical levels if remove_numbers=False
     if remove_numbers:
         text = re.sub(r"\b\d+\b", " ", text)
 
@@ -179,21 +190,26 @@ def preprocess_text(
         #     tokens.append(token.text)
         #     continue
 
+        # Lemmatize to unify inflected forms (e.g., “findings” → “finding”)
         t = token.lemma_ if lemmatize else token.text
 
+        # Remove standard English stopwords (e.g., "and", "the")
         if remove_stopwords and token.is_stop:
             continue
 
+        # Remove domain boilerplate words that dominate across all reports
         if remove_medical_boilerplate and t in MEDICAL_STOPWORDS:
             continue
-
+        
+        # Remove meaningless short tokens (e.g., single letters)
         if len(t) <= 1:
             continue
 
-        # length-based filtering but preserve clinical abbreviations
+        # Length-based filtering — keep medical abbreviations like BP/HR even if short
         if not keep_short_tokens and len(t) <= 3 and t not in CLINICAL_ABBREV:
             continue
-
+        
+        # Keep surviving tokens
         tokens.append(t)
 
-    return " ".join(tokens).strip()
+    return " ".join(tokens).strip() # final cleaned output ready for TF-IDF
