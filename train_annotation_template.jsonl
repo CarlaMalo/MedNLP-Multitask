@@ -1,0 +1,49 @@
+{"sample_id": 0, "sentence_id": 0, "text": "REASON FOR THE CONSULT:,  Nonhealing right ankle stasis ulcer.,HISTORY", "annotation": []}
+{"sample_id": 0, "sentence_id": 1, "text": "OF PRESENT ILLNESS: , This is a 52-year-old native American-Indian man with hypertension, chronic intermittent bipedal edema, and recurrent leg venous ulcers, who was admitted on 01/27/09 for scheduled vascular surgery per Dr. X. I was consulted for nonhealing right ankle stasis ulcer.", "annotation": []}
+{"sample_id": 0, "sentence_id": 2, "text": "There is a concern that the patient had a low-grade fever of 100.2 early this morning.", "annotation": []}
+{"sample_id": 0, "sentence_id": 3, "text": "The patient otherwise feels well.", "annotation": []}
+{"sample_id": 0, "sentence_id": 4, "text": "He was not even aware of the fever.", "annotation": []}
+{"sample_id": 0, "sentence_id": 5, "text": "He does have some ankle pain, worse on the right than the left.", "annotation": []}
+{"sample_id": 0, "sentence_id": 6, "text": "Old medical records were reviewed.", "annotation": []}
+{"sample_id": 0, "sentence_id": 7, "text": "He has multiple hospitalizations for leg cellulitis.", "annotation": []}
+{"sample_id": 0, "sentence_id": 8, "text": "Multiple wound cultures have repeatedly grown Pseudomonas, Enterococcus, and Stenotrophomonas in the past.", "annotation": []}
+{"sample_id": 0, "sentence_id": 9, "text": "Klebsiella and Enterobacter have also grown in the few wound cultures at some point.", "annotation": []}
+{"sample_id": 0, "sentence_id": 10, "text": "The patient has been following up at the wound center as an outpatient and was referred to Dr. X for definitive surgical management.", "annotation": []}
+{"sample_id": 0, "sentence_id": 11, "text": ",REVIEW", "annotation": []}
+{"sample_id": 0, "sentence_id": 12, "text": "OF SYSTEMS:,CONSTITUTIONAL:  No malaise.", "annotation": []}
+{"sample_id": 0, "sentence_id": 13, "text": "Positive recent low-grade fevers.", "annotation": []}
+{"sample_id": 0, "sentence_id": 14, "text": "No chills.", "annotation": []}
+{"sample_id": 0, "sentence_id": 15, "text": ",HEENT:  No acute change in visual acuity, no diplopia, no acute hearing disturbances, and no sinus congestion.", "annotation": []}
+{"sample_id": 0, "sentence_id": 16, "text": "No sore throat.", "annotation": []}
+{"sample_id": 0, "sentence_id": 17, "text": ",CARDIAC:", "annotation": []}
+{"sample_id": 0, "sentence_id": 18, "text": "No chest pain or cough.", "annotation": []}
+{"sample_id": 0, "sentence_id": 19, "text": ",GASTROINTESTINAL:", "annotation": []}
+{"sample_id": 0, "sentence_id": 20, "text": "No nausea, vomiting or diarrhea.", "annotation": []}
+{"sample_id": 0, "sentence_id": 21, "text": ",All other systems were reviewed and were negative.,PAST MEDICAL HISTORY:  ,Hypertension, exploratory laparotomy in 2004 for abdominal obstruction, cholecystectomy in 2005, chronic intermittent bipedal edema, venous insufficiency, chronic recurrent stasis ulcers.", "annotation": []}
+{"sample_id": 0, "sentence_id": 22, "text": ",SOCIAL HISTORY: , The patient admits to heavy alcohol drinking in the past, quit several years ago.", "annotation": []}
+{"sample_id": 0, "sentence_id": 23, "text": "He is also a former cigarette smoker, quit several years ago.", "annotation": []}
+{"sample_id": 0, "sentence_id": 24, "text": ",ALLERGIES:,  None known.,CURRENT", "annotation": []}
+{"sample_id": 0, "sentence_id": 25, "text": "MEDICATIONS:,  Primaxin, daptomycin, clonidine, furosemide, potassium chloride, lisinopril, metoprolol, ranitidine, Colace, amlodipine, zinc sulfate, Lortab p.r.n., multivitamins with minerals.,PHYSICAL EXAMINATION:,CONSTITUTIONAL/VITAL SIGNS:  Heart rate 73, respiratory rate 20, blood pressure 104/67, temperature 98.3, and oxygen saturation 92% on room air.,GENERAL", "annotation": []}
+{"sample_id": 0, "sentence_id": 26, "text": "APPEARANCE:", "annotation": []}
+{"sample_id": 0, "sentence_id": 27, "text": "The patient is awake, alert, and not in cardiorespiratory distress.", "annotation": []}
+{"sample_id": 0, "sentence_id": 28, "text": "Height 6 feet 1.5 inches, body weight 125.26 kilos.", "annotation": []}
+{"sample_id": 0, "sentence_id": 29, "text": ",EYES:", "annotation": []}
+{"sample_id": 0, "sentence_id": 30, "text": "Pink conjunctivae, anicteric sclerae.", "annotation": []}
+{"sample_id": 0, "sentence_id": 31, "text": "Pupils equal, brisk reaction to light.", "annotation": []}
+{"sample_id": 0, "sentence_id": 32, "text": ",EARS, NOSE, MOUTH AND THROAT:", "annotation": []}
+{"sample_id": 0, "sentence_id": 33, "text": "Intact gross hearing.", "annotation": []}
+{"sample_id": 0, "sentence_id": 34, "text": "Moist oral mucosa.", "annotation": []}
+{"sample_id": 0, "sentence_id": 35, "text": "No oral lesions.", "annotation": []}
+{"sample_id": 0, "sentence_id": 36, "text": ",NECK:", "annotation": []}
+{"sample_id": 0, "sentence_id": 37, "text": "No palpable neck masses.", "annotation": []}
+{"sample_id": 0, "sentence_id": 38, "text": "Thyroid is not enlarged on inspection.", "annotation": []}
+{"sample_id": 0, "sentence_id": 39, "text": ",RESPIRATORY:", "annotation": []}
+{"sample_id": 0, "sentence_id": 40, "text": "Regular inspiratory effort.", "annotation": []}
+{"sample_id": 0, "sentence_id": 41, "text": "No crackles or wheezes.,CARDIOVASCULAR:  Regular cardiac rhythm.", "annotation": []}
+{"sample_id": 0, "sentence_id": 42, "text": "No thrills or rubs.", "annotation": []}
+{"sample_id": 0, "sentence_id": 43, "text": ",GASTROINTESTINAL:  Normoactive bowel sounds.", "annotation": []}
+{"sample_id": 0, "sentence_id": 44, "text": "Soft.", "annotation": []}
+{"sample_id": 0, "sentence_id": 45, "text": "No guarding or rigidity.", "annotation": []}
+{"sample_id": 0, "sentence_id": 46, "text": ",LYMPHATIC:", "annotation": []}
+{"sample_id": 0, "sentence_id": 47, "text": "No cervical lymphadenopathy.", "annotation": []}
+{"sample_id": 0, "sentence_id": 48, "text": ",MUSCULOSKELETAL:  Good range of motion of upper and lower extremities.", "annotation": []}

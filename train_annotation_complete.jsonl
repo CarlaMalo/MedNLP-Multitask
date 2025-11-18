@@ -1,0 +1,83 @@
+{"sample_id": 0, "sentence_id": 0, "text": "REASON FOR THE CONSULT:,  Nonhealing right ankle stasis ulcer.,HISTORY", "annotation": [["Nonhealing", "FINDING"], ["right ankle", "BODY_PART"], ["stasis ulcer", "DISEASE"]]}
+{"sample_id": 0, "sentence_id": 1, "text": "OF PRESENT ILLNESS: , This is a 52-year-old native American-Indian man with hypertension, chronic intermittent bipedal edema, and recurrent leg venous ulcers, who was admitted on 01/27/09 for scheduled vascular surgery per Dr. X. I was consulted for nonhealing right ankle stasis ulcer.", "annotation": [["hypertension", "DISEASE"], ["bipedal edema", "SYMPTOM"], ["leg venous ulcers", "DISEASE"], ["vascular surgery", "PROCEDURE"], ["nonhealing", "FINDING"], ["right ankle", "BODY_PART"], ["stasis ulcer", "DISEASE"]]}
+{"sample_id": 0, "sentence_id": 2, "text": "There is a concern that the patient had a low-grade fever of 100.2 early this morning.", "annotation": [["low-grade fever", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 3, "text": "The patient otherwise feels well.", "annotation": []}
+{"sample_id": 0, "sentence_id": 4, "text": "He was not even aware of the fever.", "annotation": [["fever", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 5, "text": "He does have some ankle pain, worse on the right than the left.", "annotation": [["ankle", "BODY_PART"], ["pain", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 6, "text": "Old medical records were reviewed.", "annotation": []}
+{"sample_id": 0, "sentence_id": 7, "text": "He has multiple hospitalizations for leg cellulitis.", "annotation": [["leg", "BODY_PART"], ["cellulitis", "DISEASE"]]}
+{"sample_id": 0, "sentence_id": 8, "text": "Multiple wound cultures have repeatedly grown Pseudomonas, Enterococcus, and Stenotrophomonas in the past.", "annotation": [["wound cultures", "PROCEDURE"], ["Pseudomonas", "FINDING"], ["Enterococcus", "FINDING"], ["Stenotrophomonas", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 9, "text": "Klebsiella and Enterobacter have also grown in the few wound cultures at some point.", "annotation": [["Klebsiella", "FINDING"], ["Enterobacter", "FINDING"], ["wound cultures", "PROCEDURE"]]}
+{"sample_id": 0, "sentence_id": 10, "text": "The patient has been following up at the wound center as an outpatient and was referred to Dr. X for definitive surgical management.", "annotation": [["surgical management", "PROCEDURE"]]}
+{"sample_id": 0, "sentence_id": 11, "text": ",REVIEW", "annotation": []}
+{"sample_id": 0, "sentence_id": 12, "text": "OF SYSTEMS:,CONSTITUTIONAL:  No malaise.", "annotation": [["malaise", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 13, "text": "Positive recent low-grade fevers.", "annotation": [["low-grade fevers", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 14, "text": "No chills.", "annotation": [["chills", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 15, "text": ",HEENT:  No acute change in visual acuity, no diplopia, no acute hearing disturbances, and no sinus congestion.", "annotation": [["visual acuity", "FINDING"], ["diplopia", "SYMPTOM"], ["hearing disturbances", "SYMPTOM"], ["sinus congestion", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 16, "text": "No sore throat.", "annotation": [["sore throat", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 17, "text": ",CARDIAC:", "annotation": []}
+{"sample_id": 0, "sentence_id": 18, "text": "No chest pain or cough.", "annotation": [["chest pain", "SYMPTOM"], ["cough", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 19, "text": ",GASTROINTESTINAL:", "annotation": []}
+{"sample_id": 0, "sentence_id": 20, "text": "No nausea, vomiting or diarrhea.", "annotation": [["nausea", "SYMPTOM"], ["vomiting", "SYMPTOM"], ["diarrhea", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 21, "text": ",All other systems were reviewed and were negative.,PAST MEDICAL HISTORY:  ,Hypertension, exploratory laparotomy in 2004 for abdominal obstruction, cholecystectomy in 2005, chronic intermittent bipedal edema, venous insufficiency, chronic recurrent stasis ulcers.", "annotation": [["Hypertension", "DISEASE"], ["laparotomy", "PROCEDURE"], ["abdominal obstruction", "DISEASE"], ["cholecystectomy", "PROCEDURE"], ["bipedal edema", "SYMPTOM"], ["venous insufficiency", "DISEASE"], ["stasis ulcers", "DISEASE"]]}
+{"sample_id": 0, "sentence_id": 22, "text": ",SOCIAL HISTORY: , The patient admits to heavy alcohol drinking in the past, quit several years ago.", "annotation": []}
+{"sample_id": 0, "sentence_id": 23, "text": "He is also a former cigarette smoker, quit several years ago.", "annotation": []}
+{"sample_id": 0, "sentence_id": 24, "text": ",ALLERGIES:,  None known.,CURRENT", "annotation": []}
+{"sample_id": 0, "sentence_id": 25, "text": "MEDICATIONS:,  Primaxin, daptomycin, clonidine, furosemide, potassium chloride, lisinopril, metoprolol, ranitidine, Colace, amlodipine, zinc sulfate, Lortab p.r.n., multivitamins with minerals.,PHYSICAL EXAMINATION:,CONSTITUTIONAL/VITAL SIGNS:  Heart rate 73, respiratory rate 20, blood pressure 104/67, temperature 98.3, and oxygen saturation 92% on room air.,GENERAL", "annotation": []}
+{"sample_id": 0, "sentence_id": 26, "text": "APPEARANCE:", "annotation": []}
+{"sample_id": 0, "sentence_id": 27, "text": "The patient is awake, alert, and not in cardiorespiratory distress.", "annotation": [["cardiorespiratory distress", "SYMPTOM"]]}
+{"sample_id": 0, "sentence_id": 28, "text": "Height 6 feet 1.5 inches, body weight 125.26 kilos.", "annotation": []}
+{"sample_id": 0, "sentence_id": 29, "text": ",EYES:", "annotation": []}
+{"sample_id": 0, "sentence_id": 30, "text": "Pink conjunctivae, anicteric sclerae.", "annotation": [["conjunctivae", "BODY_PART"], ["sclerae", "BODY_PART"]]}
+{"sample_id": 0, "sentence_id": 31, "text": "Pupils equal, brisk reaction to light.", "annotation": [["Pupils", "BODY_PART"]]}
+{"sample_id": 0, "sentence_id": 32, "text": ",EARS, NOSE, MOUTH AND THROAT:", "annotation": []}
+{"sample_id": 0, "sentence_id": 33, "text": "Intact gross hearing.", "annotation": [["hearing", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 34, "text": "Moist oral mucosa.", "annotation": [["oral mucosa", "BODY_PART"]]}
+{"sample_id": 0, "sentence_id": 35, "text": "No oral lesions.", "annotation": [["oral", "BODY_PART"], ["lesions", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 36, "text": ",NECK:", "annotation": []}
+{"sample_id": 0, "sentence_id": 37, "text": "No palpable neck masses.", "annotation": [["neck", "BODY_PART"]]}
+{"sample_id": 0, "sentence_id": 38, "text": "Thyroid is not enlarged on inspection.", "annotation": [["Thyroid", "BODY_PART"], ["enlarged", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 39, "text": ",RESPIRATORY:", "annotation": []}
+{"sample_id": 0, "sentence_id": 40, "text": "Regular inspiratory effort.", "annotation": [["inspiratory effort", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 41, "text": "No crackles or wheezes.,CARDIOVASCULAR:  Regular cardiac rhythm.", "annotation": [["crackles", "FINDING"], ["wheezes", "FINDING"], ["cardiac rhythm", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 42, "text": "No thrills or rubs.", "annotation": [["thrills", "FINDING"], ["rubs", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 43, "text": ",GASTROINTESTINAL:  Normoactive bowel sounds.", "annotation": [["bowel sounds", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 44, "text": "Soft.", "annotation": []}
+{"sample_id": 0, "sentence_id": 45, "text": "No guarding or rigidity.", "annotation": [["guarding", "FINDING"], ["rigidity", "FINDING"]]}
+{"sample_id": 0, "sentence_id": 46, "text": ",LYMPHATIC:", "annotation": []}
+{"sample_id": 0, "sentence_id": 47, "text": "No cervical lymphadenopathy.", "annotation": [["cervical", "BODY_PART"], ["lymphadenopathy", "DISEASE"]]}
+{"sample_id": 0, "sentence_id": 48, "text": ",MUSCULOSKELETAL:  Good range of motion of upper and lower extremities.", "annotation": []}
+{"sample_id": 0, "sentence_id": 49, "text": ",SKIN:  There is hyperpigmentation involving the distal calf of both legs.", "annotation": []}
+{"sample_id": 0, "sentence_id": 50, "text": "There is an open wound on the right medial,malleolar area measuring 9 x 5cm with minimal serous drainage.", "annotation": []}
+{"sample_id": 0, "sentence_id": 51, "text": "Periwound is hyperpigmented with a hint of erythema extending proximally to the medial aspect, distal third of the right lower leg.", "annotation": []}
+{"sample_id": 0, "sentence_id": 52, "text": "There is warmth, but minimal tenderness on palpation of this area.", "annotation": []}
+{"sample_id": 0, "sentence_id": 53, "text": "There is also a wound on the right lateral malleolar area measuring 4 x 3 cm, another open wound on the left medial malleolar area measuring 7 x 4 cm.", "annotation": []}
+{"sample_id": 0, "sentence_id": 54, "text": "Wound edges are poorly defined.", "annotation": []}
+{"sample_id": 0, "sentence_id": 55, "text": ",PSYCHIATRIC:", "annotation": []}
+{"sample_id": 0, "sentence_id": 56, "text": "Appropriate mood and affect, oriented x3.", "annotation": []}
+{"sample_id": 0, "sentence_id": 57, "text": "Fair judgment and insight.", "annotation": []}
+{"sample_id": 0, "sentence_id": 58, "text": ",LABORATORY", "annotation": []}
+{"sample_id": 0, "sentence_id": 59, "text": "RESULTS: , White blood cell count from 01/28/09 is 5.8 with 64% neutrophils, H&H 11.3/33.8, and platelet count 176,000.", "annotation": []}
+{"sample_id": 0, "sentence_id": 60, "text": "BUN and creatinine 9.2/0.52.", "annotation": []}
+{"sample_id": 0, "sentence_id": 61, "text": "Albumin 3.6, AST 25, ALT 9, alk phos 87, and total bilirubin 0.6.", "annotation": []}
+{"sample_id": 0, "sentence_id": 62, "text": "One wound culture from right leg wound culture from 01/27/09 noted with young growth.", "annotation": []}
+{"sample_id": 0, "sentence_id": 63, "text": "Left leg wound culture from 01/27/09 also with young growth.", "annotation": []}
+{"sample_id": 0, "sentence_id": 64, "text": ",RADIOLOGY:,", "annotation": []}
+{"sample_id": 0, "sentence_id": 65, "text": "Chest x-ray done on 01/28/09 showed chronic bibasilar subsegmental atelectasis likely related to elevated hemidiaphragm secondary to chronic ileus.", "annotation": []}
+{"sample_id": 0, "sentence_id": 66, "text": "No absolute findings.", "annotation": []}
+{"sample_id": 0, "sentence_id": 67, "text": ",IMPRESSION:,1.", "annotation": []}
+{"sample_id": 0, "sentence_id": 68, "text": "Fevers.,2.", "annotation": []}
+{"sample_id": 0, "sentence_id": 69, "text": "Right leg/ankle cellulitis.", "annotation": []}
+{"sample_id": 0, "sentence_id": 70, "text": ",3.", "annotation": []}
+{"sample_id": 0, "sentence_id": 71, "text": "Chronic recurrent bilateral ankle venous ulcers.", "annotation": []}
+{"sample_id": 0, "sentence_id": 72, "text": ",4.", "annotation": []}
+{"sample_id": 0, "sentence_id": 73, "text": "Multiple previous wound cultures positive for Pseudomonas, Enterococcus, and Stenotrophomonas.,5.", "annotation": []}
+{"sample_id": 0, "sentence_id": 74, "text": "Hypertension.", "annotation": []}
+{"sample_id": 0, "sentence_id": 75, "text": ",RECOMMENDATIONS:,1.", "annotation": []}
+{"sample_id": 0, "sentence_id": 76, "text": "We have ordered 2 sets of blood cultures.", "annotation": []}
+{"sample_id": 0, "sentence_id": 77, "text": ",2.", "annotation": []}
+{"sample_id": 0, "sentence_id": 78, "text": "Agree with daptomycin and Primaxin IV.,3.", "annotation": []}
+{"sample_id": 0, "sentence_id": 79, "text": "Follow up result of wound cultures.", "annotation": []}
+{"sample_id": 0, "sentence_id": 80, "text": ",4.", "annotation": []}
+{"sample_id": 0, "sentence_id": 81, "text": "I will order an MRI of the right ankle to check for underlying osteomyelitis.", "annotation": []}
+{"sample_id": 0, "sentence_id": 82, "text": ",Additional ID recommendations as appropriate upon followup.", "annotation": []}

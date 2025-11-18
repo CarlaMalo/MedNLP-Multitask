@@ -1,0 +1,26 @@
+{"sample_id": 1, "sentence_id": 0, "text": "ADMISSION DIAGNOSES:,1.", "annotation": [["chest", "BODY_PART"]]}
+{"sample_id": 1, "sentence_id": 1, "text": "Atypical chest pain.", "annotation": [["chest pain", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 2, "text": ",2.", "annotation": []}
+{"sample_id": 1, "sentence_id": 3, "text": "Nausea.,3.", "annotation": [["Nausea", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 4, "text": "Vomiting.,4.", "annotation": [["Vomiting", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 5, "text": "Diabetes.,5.", "annotation": [["Diabetes", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 6, "text": "Hypokalemia.,6.", "annotation": [["Hypokalemia", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 7, "text": "Diarrhea.,7.", "annotation": [["Diarrhea", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 8, "text": "Panic and depression.", "annotation": [["Panic", "SYMPTOM"], ["depression", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 9, "text": ",8.", "annotation": []}
+{"sample_id": 1, "sentence_id": 10, "text": "Hypertension.,DISCHARGE DIAGNOSES:,1.", "annotation": [["Hypertension", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 11, "text": "Serotonin syndrome secondary to high doses of Prozac.,2.", "annotation": [["Serotonin syndrome", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 12, "text": "Atypical chest pain with myocardial infarction ruled out.", "annotation": [["chest", "BODY_PART"], ["chest pain", "SYMPTOM"], ["myocardial infarction", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 13, "text": ",3.", "annotation": []}
+{"sample_id": 1, "sentence_id": 14, "text": "Diabetes mellitus.", "annotation": [["Diabetes mellitus", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 15, "text": ",4.", "annotation": []}
+{"sample_id": 1, "sentence_id": 16, "text": "Hypertension.,5.", "annotation": [["Hypertension", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 17, "text": "Diarrhea resolved.,ADMISSION", "annotation": [["Diarrhea", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 18, "text": "SUMMARY: , The patient is a 53-year-old woman with history of hypertension, diabetes, and depression.", "annotation": [["hypertension", "DISEASE"], ["diabetes", "DISEASE"], ["depression", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 19, "text": "Unfortunately her husband left her 10 days prior to admission and she developed severe anxiety and depression.", "annotation": [["anxiety", "SYMPTOM"], ["depression", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 20, "text": "She was having chest pains along with significant vomiting and diarrhea.", "annotation": [["chest", "BODY_PART"], ["chest pains", "SYMPTOM"], ["vomiting", "SYMPTOM"], ["diarrhea", "SYMPTOM"]]}
+{"sample_id": 1, "sentence_id": 21, "text": "Of note, she had a nuclear stress test performed in February of this year, which was normal.", "annotation": [["nuclear stress test", "PROCEDURE"]]}
+{"sample_id": 1, "sentence_id": 22, "text": "She was readmitted to the hospital to rule out myocardial infarction and for further evaluation.", "annotation": [["myocardial infarction", "DISEASE"]]}
+{"sample_id": 1, "sentence_id": 23, "text": ",ADMISSION PHYSICAL: , Significant for her being afebrile.", "annotation": [["afebrile", "FINDING"]]}
+{"sample_id": 1, "sentence_id": 24, "text": "Apparently there was one temperature registered mildly high at 100.", "annotation": [["temperature registered mildly high", "FINDING"]]}
+{"sample_id": 1, "sentence_id": 25, "text": "Her blood pressure was 140/82, heart rate 83, oxygen saturation was 100%.", "annotation": []}
