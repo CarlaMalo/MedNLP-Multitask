@@ -114,8 +114,19 @@ def plot_cluster_sizes(df):
 def plot_tsne(X, labels):
     from sklearn.manifold import TSNE
     import matplotlib.pyplot as plt
+    import numpy as np
 
-    X_2d = TSNE(random_state=42, perplexity=40).fit_transform(X.toarray())
+    # convert sparse --> dense only when needed
+    if hasattr(X, "toarray"):
+        X = X.toarray()
+
+    X_2d = TSNE(
+        random_state=42,
+        perplexity=40,
+        init="pca",
+        learning_rate="auto"
+    ).fit_transform(X)
+
     plt.figure(figsize=(6,5))
     plt.scatter(X_2d[:,0], X_2d[:,1], c=labels, cmap="tab20", s=5)
     plt.title("t-SNE of clusters")
