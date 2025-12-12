@@ -1,0 +1,126 @@
+[
+  {
+    "text": "He has been having significant feet pain with significant planovalgus deformity.",
+    "spans": [
+      {
+        "text": "pain",
+        "is_entity": true,
+        "label": "SYMPTOM",
+        "reason": "is a symptom mentioned in the medical context"
+      }
+    ]
+  },
+  {
+    "text": "He has been having significant feet pain with significant planovalgus deformity.",
+    "spans": [
+      {
+        "text": "deformity",
+        "is_entity": true,
+        "label": "SYMPTOM",
+        "reason": "is a symptom mentioned in the medical context"
+      }
+    ]
+  },
+
+  {
+    "text": "A surgical mallet then compressed this bone further into the region.",
+    "spans": [
+      {
+        "text": "bone",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "is an anatomical body part being described"
+      }
+    ]
+  },
+
+  {
+    "text": "A primary incision was made between the mental foramina and the residual crest of the ridge and reflected first to the lingual area observing the superior genial tubercle in the facial area degloving the mentalis muscle and exposing the anterior body.",
+    "spans": [
+      {
+        "text": "genial tubercle",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "is an anatomical body part being described"
+      }
+    ]
+  },
+  {
+    "text": "A primary incision was made between the mental foramina and the residual crest of the ridge and reflected first to the lingual area observing the superior genial tubercle in the facial area degloving the mentalis muscle and exposing the anterior body.",
+    "spans": [
+      {
+        "text": "mental foramina",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "is an anatomical body part being described"
+      }
+    ]
+  },
+  {
+    "text": "He has been having significant feet pain with significant planovalgus deformity.",
+    "spans": [
+      {
+        "text": "planovalgus",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "is a medical diagnosis or condition"
+      }
+    ]
+  },
+  {
+    "text": "The patient was noted to have flexible vertical talus.",
+    "spans": [
+      {
+        "text": "vertical talus",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "is a medical diagnosis or condition"
+      }
+    ]
+  },
+  {
+    "text": "A piece of AlloDerm mixed with Croften and patient's platelet-rich plasma, which was centrifuged from drawing 20 cc of blood was then mixed together and placed over the lateral aspect of the block.",
+    "spans": [
+      {
+        "text": "AlloDerm",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "is a medication or pharmaceutical agent"
+      }
+    ]
+  },
+
+  {
+    "text": "The area was injected with 6 mL of 0.25% Marcaine local anesthetic.",
+    "spans": [
+      {
+        "text": "Marcaine",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "is a medication or pharmaceutical agent"
+      }
+    ]
+  },
+  {
+    "text": "The estimated blood loss in the intraoral procedure was 220 cc.  Total blood loss for the procedure 320 cc.",
+    "spans": [
+      {
+        "text": "intraoral",
+        "is_entity": true,
+        "label": "ROUTE",
+        "reason": "is a method or path of administration"
+      }
+    ]
+  },
+  {
+    "text": ",PROCEDURE,Venogram of the left arm and creation of left brachiocephalic arteriovenous fistula.",
+    "spans": [
+      {
+        "text": "venous",
+        "is_entity": true,
+        "label": "ROUTE",
+        "reason": "is a method or path of administration"
+      }
+    ]
+  }
+]
