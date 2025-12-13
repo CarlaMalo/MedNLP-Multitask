@@ -63,19 +63,19 @@ print(f"Macro F1:       {f1_m:.4f}")
 # 6. Show some error cases
 print("\n===== Examples of WRONG predictions =====\n")
 
-for g,p,sent_id in zip(gold_spans, pred_spans, associated_sentence_idx):
-	if g != p:
-		print("Text:", sentences[sent_id])
-		print("Gold:", g)
-		print("Pred:", p)
-		print("-" * 50)
-		break
+for sent_id, (g, p) in enumerate(zip(gold_spans, pred_spans)):
+    if g != p:
+        print("Text:", sentences[sent_id])
+        print("Gold:", g)
+        print("Pred:", p)
+        print("-" * 50)
+        break
 #7. Show some correct cases
 print("\n===== Examples of CORRECT predictions =====\n")
-for g,p,sent_id in zip(gold_spans, pred_spans, associated_sentence_idx):
-	if g == p and g != []:
-		print("Text:", sentences[sent_id])
-		print("Gold:", g)
-		print("Pred:", p)
-		print("-" * 50)
-		break
+for sent_id, (g, p) in enumerate(zip(gold_spans, pred_spans)):
+    if g == p:
+        print("Text:", sentences[sent_id])
+        print("Gold:", g)
+        print("Pred:", p)
+        print("-" * 50)
+        break
