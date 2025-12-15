@@ -1,0 +1,480 @@
+[
+  {
+    "text": "He has been having significant feet pain with significant planovalgus deformity.",
+    "spans": [
+      {
+        "text": "feet",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to a specific anatomical location of the body (the patient's feet)."
+      },
+      {
+        "text": "pain",
+        "is_entity": true,
+        "label": "SYMPTOM",
+        "reason": "Describes a subjective clinical complaint experienced by the patient."
+      },
+      {
+        "text": "planovalgus deformity",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A named pathological deformity of the foot that functions as a clinical diagnosis."
+      },
+      {
+        "text": "deformity",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Appears here only as part of the longer disease phrase 'planovalgus deformity'; only the full phrase is annotated as the entity in this schema."
+      },
+      {
+        "text": "significant",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "An adjective describing severity and not a medical entity on its own."
+      }
+    ]
+  },
+  {
+    "text": "A surgical mallet then compressed this bone further into the region.",
+    "spans": [
+      {
+        "text": "bone",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to an anatomical structure, even though it is mentioned generically."
+      },
+      {
+        "text": "surgical mallet",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A surgical instrument, not a symptom, body part, disease, drug, or route."
+      },
+      {
+        "text": "region",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A vague spatial term without a specific anatomical identity in this context."
+      }
+    ]
+  },
+  {
+    "text": "DIAGNOSIS,End-stage renal disease.",
+    "spans": [
+      {
+        "text": "End-stage renal disease",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A clearly defined clinical diagnosis describing severe chronic kidney failure."
+      },
+      {
+        "text": "DIAGNOSIS",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A report section header rather than a medical entity."
+      }
+    ]
+  },
+  {
+    "text": "A piece of AlloDerm mixed with Croften and patient's platelet-rich plasma, which was centrifuged from drawing 20 cc of blood was then mixed together and placed over the lateral aspect of the block.",
+    "spans": [
+      {
+        "text": "AlloDerm",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "A named biological graft material used therapeutically, treated here as a drug-like product."
+      },
+      {
+        "text": "Croften",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Mentioned as part of the mixture but not clearly identified as a drug entity in this schema."
+      },
+      {
+        "text": "platelet-rich plasma",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Autologous biological material, not categorized as DRUG, BODY_PART or DISEASE in this label set."
+      }
+    ]
+  },
+  {
+    "text": "The area was injected with 6 mL of 0.25% Marcaine local anesthetic.",
+    "spans": [
+      {
+        "text": "Marcaine",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "A branded local anesthetic agent explicitly administered to the patient."
+      },
+      {
+        "text": "local anesthetic",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "Refers to a class of medications used for local anesthesia and treated as a drug mention here."
+      },
+      {
+        "text": "area",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A non-specific region term with no clear anatomical definition in this sentence."
+      }
+    ]
+  },
+  {
+    "text": "The estimated blood loss in the intraoral procedure was 220 cc. Total blood loss for the procedure 320 cc.",
+    "spans": [
+      {
+        "text": "intraoral",
+        "is_entity": true,
+        "label": "ROUTE",
+        "reason": "Describes a route or location of access through the oral cavity, consistent with the ROUTE label in this schema."
+      },
+      {
+        "text": "blood loss",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A quantitative outcome measure, not annotated as SYMPTOM or DISEASE in this task."
+      },
+      {
+        "text": "procedure",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Refers to an intervention type, not a symptom, body part, disease, drug, or route."
+      }
+    ]
+  },
+  {
+    "text": "The hard palate was directly observed.",
+    "spans": [
+      {
+        "text": "hard palate",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific anatomical structure of the oral cavity."
+      },
+      {
+        "text": "directly",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "An adverb describing how the observation was performed, not a medical entity."
+      }
+    ]
+  },
+  {
+    "text": "A primary incision was made between the mental foramina and the residual crest of the ridge and reflected first to the lingual area observing the superior genial tubercle in the facial area degloving the mentalis muscle and exposing the anterior body.",
+    "spans": [
+      {
+        "text": "mental foramina",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific anatomical landmark in the mandible."
+      },
+      {
+        "text": "genial tubercle",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A named bony prominence on the mandible."
+      },
+      {
+        "text": "mentalis muscle",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific muscle of the chin region."
+      },
+      {
+        "text": "anterior body",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to the anterior body of the mandible as an anatomical segment."
+      },
+      {
+        "text": "incision",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A surgical action, not an anatomical structure, disease, symptom, drug, or route."
+      }
+    ]
+  },
+  {
+    "text": "Acquired facial deformity.",
+    "spans": [
+      {
+        "text": "facial",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to the face as an anatomical region."
+      },
+      {
+        "text": "deformity",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Appears here only as part of the longer disease phrase 'facial deformity'; only the full phrase is annotated as the entity in this schema."
+      },
+      {
+        "text": "facial deformity",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A structural abnormality of the face; the full phrase is treated as a deformity diagnosis."
+      },
+      {
+        "text": "Acquired",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Describes the onset pattern (acquired vs congenital), not an entity itself."
+      }
+    ]
+  },
+  {
+    "text": "Severe mandibular atrophy.",
+    "spans": [
+      {
+        "text": "mandibular",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to the mandible (lower jaw) as the anatomical location."
+      },
+      {
+        "text": "atrophy",
+        "is_entity": true,
+        "label": "SYMPTOM",
+        "reason": "Describes a loss of tissue volume or wasting, treated as a clinical symptom."
+      },
+      {
+        "text": "Severe",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "An adjective giving severity, not a separate medical entity."
+      }
+    ]
+  },
+  {
+    "text": "The 7/8th inch staple was then placed across the sinus tarsi to maintain the reduction.",
+    "spans": [
+      {
+        "text": "sinus tarsi",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific anatomical space on the lateral side of the foot."
+      },
+      {
+        "text": "staple",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A piece of surgical hardware, not a body part, disease, symptom, drug, or route."
+      }
+    ]
+  },
+  {
+    "text": "Masticatory dysfunction.,PROCEDURE PERFORMED: , Autologous iliac crest bone graft to maxilla and mandible under general anesthetic.",
+    "spans": [
+      {
+        "text": "Masticatory dysfunction",
+        "is_entity": true,
+        "label": "SYMPTOM",
+        "reason": "Describes impairment of chewing function, i.e. a functional symptom."
+      },
+      {
+        "text": "iliac crest",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific region of the pelvis used as a graft donor site."
+      },
+      {
+        "text": "bone",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to an anatomical structure, even though it is mentioned generically."
+      },
+      {
+        "text": "maxilla",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A named upper jaw bone."
+      },
+      {
+        "text": "mandible",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A named lower jaw bone."
+      },
+      {
+        "text": "general anesthetic",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "Refers to an anesthetic drug used to induce general anesthesia."
+      },
+      {
+        "text": "Autologous",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "Describes the source of the graft (from the same patient), not a clinical entity."
+      }
+    ]
+  },
+  {
+    "text": "Nasal trachea intubation was performed per routine.",
+    "spans": [
+      {
+        "text": "trachea",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific anatomical structure of the airway."
+      },
+      {
+        "text": "intubation",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A medical procedure, not a symptom, body part, disease, drug, or route."
+      }
+    ]
+  },
+  {
+    "text": "The wound was irrigated with normal saline.",
+    "spans": [
+      {
+        "text": "normal saline",
+        "is_entity": true,
+        "label": "DRUG",
+        "reason": "A solution used therapeutically in procedures, treated as a drug in this schema."
+      },
+      {
+        "text": "wound",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A condition of tissue but not labeled as DISEASE or SYMPTOM in this task."
+      }
+    ]
+  },
+  {
+    "text": "The patient was noted to have flexible vertical talus.",
+    "spans": [
+      {
+        "text": "vertical talus",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A named congenital deformity of the foot, functioning as a clinical diagnosis."
+      },
+      {
+        "text": "flexible",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "An adjective describing the deformity, not a standalone medical entity."
+      }
+    ]
+  },
+  {
+    "text": "Subsequent to the harvest of the bilateral ilium, the intraoral region was scrubbed per routine.",
+    "spans": [
+      {
+        "text": "ilium",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific pelvic bone used here as a donor site."
+      },
+      {
+        "text": "intraoral",
+        "is_entity": true,
+        "label": "ROUTE",
+        "reason": "Describes an approach through the oral cavity, consistent with its ROUTE usage."
+      },
+      {
+        "text": "region",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A generic spatial term, not a specific anatomical entity."
+      }
+    ]
+  },
+  {
+    "text": ",PROCEDURE,Venogram of the left arm and creation of left brachiocephalic arteriovenous fistula.",
+    "spans": [
+      {
+        "text": "arm",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "Refers to the patient's upper limb as an anatomical region."
+      },
+      {
+        "text": "fistula",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "Represents an abnormal connection between vessels, treated as a pathological condition."
+      },
+      {
+        "text": "Venogram",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A diagnostic imaging procedure, not an entity of the target NER types."
+      },
+      {
+        "text": "PROCEDURE",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A section header/section label, not a symptom, body part, disease, drug, or route."
+      }
+    ]
+  },
+  {
+    "text": "PREOPERATIVE DIAGNOSIS:",
+    "spans": [
+      {
+        "text": "PREOPERATIVE DIAGNOSIS",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "A report section header, not a medical entity."
+      }
+    ]
+  },
+  {
+    "text": "Persistent pneumonia, right upper lobe of the lung.",
+    "spans": [
+      {
+        "text": "right upper lobe of the lung",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A specific anatomical region of the lung."
+      },
+      {
+        "text": "lung",
+        "is_entity": true,
+        "label": "BODY_PART",
+        "reason": "A typical anatomic part."
+      }
+    ]
+  },
+  {
+    "text": "Congenital pneumonia was considered.",
+    "spans": [
+      {
+        "text": "Congenital pneumonia",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A disease diagnosis with congenital onset described as a whole."
+      },
+      {
+        "text": "pneumonia",
+        "is_entity": true,
+        "label": "DISEASE",
+        "reason": "A typical disease diagnosis."
+      },
+      {
+        "text": "Congenital",
+        "is_entity": false,
+        "label": "NONE",
+        "reason": "An adjective describing disease onset, not an entity by itself."
+      }
+    ]
+  },
+  {
+    "text": "4% lidocaine had been infused into the endotracheal tube.",
+    "spans": [
+      {
+        "text": "endotracheal",
+        "is_entity": true,
+        "label": "ROUTE",
+        "reason": "Indicates a route of drug administration via the trachea."
+      }
+    ]
+  }
+
+]
