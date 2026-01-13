@@ -1,4 +1,4 @@
-name: task3
+name: task3-nlp
 channels:
   - conda-forge
   - defaults
