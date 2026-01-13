@@ -1,4 +1,4 @@
-name: nlp-esther
+name: project-env
 channels:
   - defaults
   - conda-forge
@@ -305,4 +305,4 @@ dependencies:
       - en-core-web-md==3.8.0
       - en-core-web-sm==3.8.0
       - spacy-llm==0.7.3
-prefix: C:\Users\Esther\anaconda3\envs\nlp-esther
+
