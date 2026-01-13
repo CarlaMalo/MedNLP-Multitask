@@ -2,6 +2,8 @@
 
 Transformer-based Clinical Text Analysis
 
+Authors: Ke Wang, Carla Malo, Esther Tan
+
 ## Dataset
 
 - **Source**: [argilla/medical-domain](https://huggingface.co/datasets/argilla/medical-domain)
@@ -10,6 +12,8 @@ Transformer-based Clinical Text Analysis
 ## Environment Setup
 
 This project uses separate Python environments for different tasks to ensure package compatibility.
+
+Tasks 1 to 3 are therefore kept separated due to incompatible dependency versions across tasks.
 
 ### Task 1 & Task 3 Environment
 
@@ -27,9 +31,13 @@ bash env_scripts/build_env_tasks_1_3.sh
 
    `python -m ipykernel install --user --name=task3-nlp`
 
-Alternatively, the .yml configuration can be used:
+*Alternatively*, the .yml configuration can be used:
 
-`conda env create --file env_scripts/task3_env.yml`
+```
+conda env create --file env_scripts/task3_env.yml
+conda activate task3-nlp
+python -m spacy download en_core_web_md
+```
 
 ### Task 2 Environment
 
@@ -47,9 +55,13 @@ bash env_scripts/build_env_task_2.sh
 
    `python -m ipykernel install --user --name=task2-nlp`
 
-Alternatively, the .yml configuration can be used:
+*Alternatively*, the .yml configuration can be used:
 
-`conda env create --file env_scripts/task2_env.yml`
+```
+conda env create --file env_scripts/task2_env.yml
+conda activate task2-nlp
+python -m spacy download en_core_web_md
+```
 
 ### Notes
 
