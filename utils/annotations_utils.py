@@ -77,7 +77,8 @@ def annotate_sentences_and_save(all_sentences, annotations_dict, labels, annotat
             for keyword in keywords:
                 start_idxs = [match.start() for match in re.finditer(keyword, sentence)]
                 if len(start_idxs):
-                    entities.append([idx, idx+len(keyword), label] for idx in start_idxs)
+                    for idx in start_idxs:
+                        entities.append([idx, idx+len(keyword), label] )
         annotations_list.append([sentence, {'entities':entities}])
     output = {'classes': labels, 'annotations':annotations_list}
     with open(annotations_filepath, 'w') as fp:
