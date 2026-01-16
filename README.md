@@ -11,11 +11,19 @@ Authors: Ke Wang, Carla Malo, Esther Tan
 
 ## Environment Setup
 
-This project uses separate Python environments for different tasks to ensure package compatibility.
+### Unified Environment YAML (Foy any Task) - (CUDA 11.8)
 
-Tasks 1 to 3 are therefore kept separated due to incompatible dependency versions across tasks.
+To run any of the tasks, you can use the following .yml (configured for CUDA 11.8):
 
-### Task 1 & Task 3 Environment
+```
+conda env create --file env_scripts/tasks_env.yml
+conda activate tasks-nlp
+python -m spacy download en_core_web_md
+```
+
+*Alternatively*, we provide the following scripts for reference:
+
+#### Task 1 & Task 3 Environment Script - (CUDA 11.8)
 
 1. Create the environment from the script:
 
@@ -31,15 +39,8 @@ bash env_scripts/build_env_tasks_1_3.sh
 
    `python -m ipykernel install --user --name=task3-nlp`
 
-*Alternatively*, the .yml configuration can be used:
 
-```
-conda env create --file env_scripts/task3_env.yml
-conda activate task3-nlp
-python -m spacy download en_core_web_md
-```
-
-### Task 2 Environment
+#### Task 2 Environment Script - (CPU friendly)
 
 1. Create the environment from the script:
 
@@ -55,18 +56,12 @@ bash env_scripts/build_env_task_2.sh
 
    `python -m ipykernel install --user --name=task2-nlp`
 
-*Alternatively*, the .yml configuration can be used:
-
-```
-conda env create --file env_scripts/task2_env.yml
-conda activate task2-nlp
-python -m spacy download en_core_web_md
-```
-
 ### Notes
 
 Always activate the appropriate environment before running the corresponding task:
 
-    `conda activate task3-nlp`for tasks 1 and 3
+    `conda activate tasks-nlp` for any task
+
+    `conda activate task3-nlp` for tasks 1 and 3
     
     `conda activate task2-nlp` for task 2

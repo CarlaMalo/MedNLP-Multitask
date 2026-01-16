@@ -5,6 +5,13 @@ from spacy_llm.util import assemble
 import json
 import os
 import argparse
+import warnings
+from transformers import logging as transformers_logging
+
+# Suppress transformers warnings about attention mask and pad token
+transformers_logging.set_verbosity_error()
+warnings.filterwarnings("ignore", message=".*attention mask.*")
+warnings.filterwarnings("ignore", message=".*pad token.*")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Load and initialize spaCy-LLM model")

@@ -125,9 +125,9 @@ def get_label_lists(gold_spans, pred_spans):
                 true_labels.append("NONE")     # if no gold annotation
                 pred_labels.append(p_label)    # Extra annotation from pred set
                 sentence_ids.append(sent_idx)
-    print("True labels\n", true_labels)
-    print("pred\n", pred_labels)
-    print("sent ids\n", sentence_ids)
+    #print("True labels\n", true_labels)
+    #print("pred\n", pred_labels)
+    #print("sent ids\n", sentence_ids)
     return true_labels, pred_labels, sentence_ids
 
 def __remove_overlaps(entities, is_annotations_list):

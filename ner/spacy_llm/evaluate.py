@@ -2,9 +2,18 @@ import json
 import spacy
 import os
 from sklearn.metrics import precision_recall_fscore_support, confusion_matrix
+
+from utils.task2_utils import print_ner_metrics, store_ner_metrics
 from ..utils import extract_spans, get_label_lists, remove_overlapping_spans
 import time
 import argparse
+import warnings
+from transformers import logging as transformers_logging
+
+# Suppress transformers warnings about attention mask and pad token
+transformers_logging.set_verbosity_error()
+warnings.filterwarnings("ignore", message=".*attention mask.*")
+warnings.filterwarnings("ignore", message=".*pad token.*")
 
 parser = argparse.ArgumentParser(description="Evaluate spaCy-LLM model")
 # Models available: mistral-7b, dolly-v2-3b, LLama-2-7b-hf, Llama-2-13b-hf
@@ -41,11 +50,22 @@ print(f"Prediction completed in {elapsed_time:.2f} seconds for {len(sentences)} 
 
 # Prepare label lists 
 true_labels, pred_labels, associated_sentence_idx = get_label_lists(gold_spans, pred_spans)
-
-# Build confusion matrix over all labels 
+ 
 labels = sorted(set(true_labels) | set(pred_labels))
-cm = confusion_matrix(true_labels, pred_labels, labels=labels)
+entity_labels = [lab for lab in labels if lab != "NONE"]
+entity_indices = [labels.index(lab) for lab in entity_labels]
 
+# 5. Evaluate macro and micro F1 and save metrics to CSV
+path_spacy_llm_ner = f"Task2/results/spacy_llm_{model}_ner.csv"
+metrics = store_ner_metrics(true_labels, pred_labels, path_spacy_llm_ner, labels=entity_labels)
+
+print("\n" + "=" * 80)
+print("spaCy-LLM NER Evaluation")
+print("=" * 80)
+print_ner_metrics(metrics)
+
+# Build confusion matrix over all labels
+cm = confusion_matrix(true_labels, pred_labels, labels=labels)
 # Per-label TP, FP, FN 
 tp_per_label = {}
 fp_per_label = {}
@@ -62,33 +82,11 @@ print("\n==== Per-label Counts ====")
 for lab in labels:
     print(f"{lab}: TP={tp_per_label[lab]}, FP={fp_per_label[lab]}, FN={fn_per_label[lab]}")
 
-entity_labels = [lab for lab in labels if lab != "NONE"]
-entity_indices = [labels.index(lab) for lab in entity_labels]
 tp_entities = sum(cm[i, i] for i in entity_indices)
 fp_entities = sum(cm[:, i].sum() - cm[i, i] for i in entity_indices)
 fn_entities = sum(cm[i, :].sum() - cm[i, i] for i in entity_indices)
 
 print(f"TP_entities: {tp_entities}, FP_entities: {fp_entities}, FN_entities: {fn_entities}")
-
-# Metrics
-prec, rec, f1, _ = precision_recall_fscore_support(
-    true_labels, pred_labels, labels=entity_labels, average="micro", zero_division=0
-)
-
-print("\n==== Micro-Averaged Metrics (entities) ====")
-print(f"Precision: {prec:.4f}")
-print(f"Recall:    {rec:.4f}")
-print(f"F1-score:  {f1:.4f}")
-
-# Macro metrics over entity labels only (exclude NONE from the averaging set)
-prec_m, rec_m, f1_m, _ = precision_recall_fscore_support(
-    true_labels, pred_labels, labels=entity_labels, average="macro", zero_division=0
-)
-
-print("\n==== Macro Metrics (entities) ====")
-print(f"Macro Precision (entities): {prec_m:.4f}")
-print(f"Macro Recall (entities):    {rec_m:.4f}")
-print(f"Macro F1 (entities):        {f1_m:.4f}")
 
 # 6. Show some error cases
 print("\n===== Examples of WRONG predictions =====\n")
