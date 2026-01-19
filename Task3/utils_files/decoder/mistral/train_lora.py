@@ -25,36 +25,53 @@ def build_sft_dataset(texts, labels, prompt_fn, tokenizer, label_list):
 
 
 def tokenize_sft(batch, tokenizer, max_length=512):
-    """  Tokenize SFT dataset with proper masking for prompt/response."""
-
-    # Tokenize prompt and response separately to know boundaries
-    prompt_tokens = tokenizer(
-        batch["prompt"],
-        padding=False,
-        truncation=True,
-        max_length=max_length
-    )
-
-    response_tokens = tokenizer(
-        batch["response"],
-        padding=False,
-        truncation=True,
-        max_length=max_length,
-        add_special_tokens=False
-    )
+    """Tokenize SFT dataset with proper masking for prompt/response.
+    
+    Ensures response is never truncated by reserving space for it.
+    """
 
     pad_id = tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id
     input_ids = []
     labels = []
     attention_masks = []
+    
+    min_response_length = 10  # Reserve minimum space for response
 
-    for p_ids, r_ids in zip(prompt_tokens["input_ids"], response_tokens["input_ids"]):
-        # Truncate if combined is too long
-        combined = (p_ids + r_ids)[:max_length]
-
-        # Labels: mask prompt tokens with -100 so loss only on response part
-        label_seq = ([-100] * len(p_ids) + r_ids)[:max_length]
-
+    for prompt_text, response_text in zip(batch["prompt"], batch["response"]):
+        # Tokenize prompt and response separately with consistent settings
+        prompt_tokens = tokenizer(
+            prompt_text,
+            padding=False,
+            truncation=False,
+            add_special_tokens=True
+        )
+        
+        response_tokens = tokenizer(
+            response_text,
+            padding=False,
+            truncation=False,
+            add_special_tokens=False  # Response doesn't need BOS, already in prompt
+        )
+        
+        prompt_ids = prompt_tokens["input_ids"]
+        response_ids = response_tokens["input_ids"]
+        
+        # Ensure response fits; truncate prompt if needed
+        if len(prompt_ids) + len(response_ids) > max_length:
+            max_prompt_len = max(max_length - len(response_ids), min_response_length)
+            prompt_ids = prompt_ids[:max_prompt_len]
+        
+        # Concatenate
+        combined = prompt_ids + response_ids
+        
+        # Truncate if still too long 
+        if len(combined) > max_length:
+            combined = combined[:max_length]
+        
+        # Create labels: mask prompt tokens, keep response tokens
+        prompt_len = len(prompt_ids)
+        label_seq = [-100] * prompt_len + combined[prompt_len:]
+        
         # Pad to max_length
         pad_len = max_length - len(combined)
         if pad_len > 0:
@@ -77,9 +94,14 @@ def train_lora(
     train_labels,
     label_list,
     prompt_fn,
-    output_dir="Task3/mistral_lora"
+    output_dir="Task3/mistral_lora",
+    eval_split=0.1
 ):
-    """Train LoRA SFT on the provided training data."""
+    """Train LoRA SFT on the provided training data with validation split.
+    
+    Args:
+        eval_split: Proportion of training data to use for validation (default 0.1)
+    """
     lora_config = LoraConfig(
         r=8,
         lora_alpha=16,
@@ -100,26 +122,35 @@ def train_lora(
         load_from_cache_file=True,
         desc="Tokenizing dataset"
     )
+    
+    # Split into train and eval
+    split_ds = train_ds.train_test_split(test_size=eval_split, seed=42)
+    train_ds = split_ds["train"]
+    eval_ds = split_ds["test"]
 
     args = TrainingArguments(
         output_dir=output_dir,
-        per_device_train_batch_size=4,
+        per_device_train_batch_size=16,
         gradient_accumulation_steps=4,
-        learning_rate=2e-4,
-        num_train_epochs=15,
+        learning_rate=1e-5,
+        num_train_epochs=8,
+        save_total_limit=1,
         fp16=True,
-        save_strategy="no",
-        logging_steps=100,
+        save_strategy="epoch", # "no"
+        eval_strategy="epoch",
+        logging_strategy="epoch",  
         report_to="none",
-        load_best_model_at_end=True,
         disable_tqdm=True,
-        log_level="warning"
+        log_level="error",  # Set to 'error' to suppress warnings
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_loss"
     )
 
     trainer = Trainer(
         model=model,
         args=args,
-        train_dataset=train_ds
+        train_dataset=train_ds,
+        eval_dataset=eval_ds
     )
 
     trainer.train()

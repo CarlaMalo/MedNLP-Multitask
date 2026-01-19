@@ -99,15 +99,16 @@ def predict_labels(
     labels,
     prompt_fn,
     max_new_tokens=10,
-    verbose=False
+    verbose=True
 ):
     """ Predict labels using prefix-constrained decoding"""
     # Prefix-constrained decoding setup
     label_token_ids = build_label_token_map(labels, tokenizer)
 
     preds = []
-    iterator = tqdm(texts, disable=not verbose) if verbose else texts
-    for text in iterator:
+    for i, text in enumerate(tqdm(texts, disable=not verbose, bar_format='{n_fmt}/{total_fmt}') if verbose else enumerate(texts)):
+        if not verbose:
+            i, text = text
         prompt = prompt_fn(text, labels)
         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
